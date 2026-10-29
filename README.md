@@ -24,7 +24,7 @@ Open `results/report.md` (charts and CSV tables are saved next to it). `demo_res
 `config.py` settings | `data.py` data | `analysis.py` | `signals.py` momentum and mean-reversion | `backtest.py` | `probability.py` | `risk.py` |
 `options.py` | `decision_engine.py` | `drills.py` | `plots.py` | `run_all.py` runs everything.
 
-## Design choices worth explaining in an interview
+
 * **No look-ahead.** Signals use data up to day t and trade on day t+1; costs are charged on turnover.
 * **Volatility targeting.** Position = signal x risk budget / volatility, with per-asset and gross-leverage caps.
 * **Honest testing.** Walk-forward: choose the parameter on 3 years, test on the next unseen year. Report a bootstrap interval, not just one Sharpe.
